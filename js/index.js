@@ -66,11 +66,11 @@ document.addEventListener("keydown", function() {
 const btnfun = document.querySelector(".btn");
 btnfun.addEventListener("click", function myFunction() {
   var txt;
-  var person = prompt("Please enter your name:", "Harry Potter");
+  var person = prompt("Please enter your name:", "");
   if (person == null || person == "") {
     alert("User cancelled the prompt.");
   } else {
-    alert("Hello " + person + "! Welcome to FunBus");
+    alert("Hello " + person + "! Welcome to FunBus.");
   }
   document.getElementById("demo").innerHTML = txt;
 });
@@ -78,4 +78,13 @@ btnfun.addEventListener("click", function myFunction() {
 const h1s = document.querySelector("h1");
 h1s.addEventListener("drag", () => {
   h1s.style.fontSize = "80px";
+});
+
+const img2 = document.querySelector("#img2");
+img2.addEventListener("mousedown", function(event) {
+  event.target.style.opacity = "0";
+});
+
+img2.addEventListener("mouseup", function(event) {
+  event.target.style.opacity = "1";
 });
